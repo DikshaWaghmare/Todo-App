@@ -1,0 +1,81 @@
+#Greeting.js
+
+import React from 'react'
+import './Greeting.css'
+export default function Greeting(props){
+    
+    var flower;
+    if (props.day === 'Monday') {
+      flower = '🌹';
+    }
+    else if(props.day === 'Tuesday') {
+      flower = '🌸';
+    }
+    else if(props.day === 'Wednesday') {
+      flower = '🌺';
+    }
+    else if(props.day === 'Thursday') {
+      flower = '🌻';
+    }
+    else if(props.day === 'Friday') {
+      flower = '🌼';
+    }
+    else if(props.day === 'Saturday') {
+      flower = '🌷';
+    }
+    else if(props.day === 'Sunday') {
+      flower = '🌸';
+    }
+  return (
+    <div className='greet-container'>Good Morning, {flower} 
+      <span>({props.day})</span>
+    </div>
+  )
+}
+
+#Greeting.css
+.greet-container{
+    width:400px;
+    box-shadow: 0px 0px 5px black;
+    margin:10px;
+    padding:10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+#App.js
+import React from 'react'
+import Greeting from './Greeting/Greeting'
+
+function App() {
+  return (
+    <>
+    <h1>Hello world!</h1>
+    <Greeting day="Monday"/>
+    <Greeting day="Tuesday"/>
+    <Greeting day="Wednesday"/>
+    <Greeting day="Thursday"/>
+    <Greeting day="Friday"/>
+    <Greeting day="Saturday"/>
+    <Greeting day="Sunday"/>  
+    </>
+  );
+}
+export default App;
+---------------------------------------------------------------------------------------------------------
+
+@Timebased Greeting
+
+#add.js
+import TimeGreeting from './Greeting/TimeGreeting'
+export default function App(){
+  return(
+    <>
+     <TimeGreeting name="Diksha"/>
+     <TimeGreeting name="Shraddha"/>
+     <TimeGreeting name="Nikhita"/>
+     <TimeGreeting name="Raji"/>
+    </>
+  );
+}
+
